@@ -9,9 +9,10 @@ int main(int argc, char* argv[]) {
 	scanf_s("%d", &a);
 	scanf_s("%d", &b);
 
-	int x = ((h - b) / (a - b));
+	int x = h - b;
+	int y = a - b;
 
-	printf("%d", x - int(x < 0) * (x - 1) + int((((a - b) + ((h - b) % (a - b))) % (a - b)) > 0));//Оно честно прошло все тесты
+	printf("%d", 1 + (x-1)/y * int(x > 0));
 
 	return EXIT_SUCCESS;
 }
